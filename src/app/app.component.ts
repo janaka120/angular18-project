@@ -14,5 +14,5 @@ export class AppComponent {
   imageUrl: string = "https://miro.medium.com/v2/resize:fit:1200/1*4sz5Fh2lrvlt68kVoj6PQQ.png";
   imageUrl2: string = "https://www.metizsoft.com/wp-content/uploads/2024/06/Angular-18.webp";
   isDisabled: boolean = false;
-  isActive: boolean = true;
+  isActive: boolean = false;
 }

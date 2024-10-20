@@ -5,3 +5,6 @@ img {
 .active {
     background-color: cornflowerblue;
 }
+.no-active {
+    background-color: darkgray;
+}
