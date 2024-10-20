@@ -6,11 +6,12 @@ import { Component } from "@angular/core";
     // template: `<h1>App Navbar</h1>
     //             <p>paragraph</p>
     //             <button>Submit</button>`,
-    styles: `h1{
-                color: green;
-                background-color: #f3f3f3
-    }`,
-    templateUrl: './navbar.component.html'
+    // styles: `h1{
+    //             color: green;
+    //             background-color: #f3f3f3
+    // }`,
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.css'
 })
 
 export class AppNavbar {
