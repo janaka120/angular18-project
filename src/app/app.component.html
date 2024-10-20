@@ -3,3 +3,7 @@
 <app-header></app-header>
 <img src="{{imageUrl}}" alt="" />
 <img [src]="imageUrl2" alt="" />
+
+<button disabled="{{ isDisabled }}">Disabled by string interpolation</button> <!-- string interpolation always convert value in to string, so isDisabled=false boolean representation is true-->
+<button [disabled]="isDisabled">Disabled by property binding</button>
+<!-- for the property data binding we don't use string interpolation -->
