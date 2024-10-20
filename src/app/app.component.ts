@@ -11,4 +11,5 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'angular-18-beginner-app';
+  imageUrl: string = "https://miro.medium.com/v2/resize:fit:1200/1*4sz5Fh2lrvlt68kVoj6PQQ.png";
 }
