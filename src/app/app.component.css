@@ -4,7 +4,9 @@ img {
 
 .active {
     background-color: cornflowerblue;
+    border: 2px solid red !important;
 }
 .no-active {
     background-color: darkgray;
+    border: 2px solid blue !important;
 }
