@@ -10,3 +10,8 @@ img {
     background-color: darkgray;
     border: 2px solid blue !important;
 }
+
+.apple {
+    background-color: powderblue;
+    border: 2px solid aquamarine;
+}
