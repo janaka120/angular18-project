@@ -21,4 +21,10 @@ export class AppComponent {
   buttonClick () {
     console.log("Button Click..");
   }
+
+  keyupHandler(event: KeyboardEvent) {
+    if(event.keyCode === 13) {
+      console.log("Press Enter key");
+    }
+  }
 }

@@ -17,5 +17,8 @@
 <!-- style binding -->
 <button [style.background]="isActive ?'red' : 'yellow'">Style Button</button>
 
-<!-- Event binding -->
+<!-- click Event binding -->
 <button (click)="buttonClick()">Click Button</button>
+
+<!-- keyup event input -->
+<input (keyup)="keyupHandler($event)" />
