@@ -17,4 +17,8 @@ export class AppComponent {
   isActive: boolean = true;
 
   fruitName = 'Apple';
+
+  buttonClick () {
+    console.log("Button Click..");
+  }
 }
