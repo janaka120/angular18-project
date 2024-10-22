@@ -31,4 +31,8 @@ export class AppComponent {
   keyupEnterHandler(event: Event) {
     console.log("Press Enter key", event);
   }
+
+  keyupEnterHandlerByTag(user: HTMLInputElement) {
+    console.log("Press Enter key", user.value);
+  }
 }
