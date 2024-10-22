@@ -27,4 +27,8 @@ export class AppComponent {
       console.log("Press Enter key");
     }
   }
+
+  keyupEnterHandler(event: Event) {
+    console.log("Press Enter key", event);
+  }
 }

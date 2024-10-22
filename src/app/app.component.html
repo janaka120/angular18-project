@@ -21,4 +21,8 @@
 <button (click)="buttonClick()">Click Button</button>
 
 <!-- keyup event input -->
-<input (keyup)="keyupHandler($event)" />
+<input type="text" (keyup)="keyupHandler($event)" />
+
+<!-- keyup event binding by angular way -->
+<!-- if you want catch latter `a` press, just replace the (keyup.a)=`keyupHandler()` -->
+<input type="text" (keyup.enter)="keyupEnterHandler($event)" />
