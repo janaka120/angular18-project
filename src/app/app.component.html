@@ -58,7 +58,7 @@
     </div>
 
     <div>
-        <!-- Two way data binding -->
+        <!-- Two way data binding with template variable #userDetails-->
         <span>Two way data binding</span>
         <input
           type="text"
@@ -66,5 +66,12 @@
           (keyup.enter)="keyupChangeHandler(userDetails)"
           #userDetails
         />
+    </div>
+
+    <div>
+        <!-- Two way data binding with ngModel -->
+        <span>Two way data binding with ngModel</span>
+        <input [(ngModel)]="userName1" />
+        {{userName1}}
     </div>
 </div>
