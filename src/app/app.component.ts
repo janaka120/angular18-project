@@ -15,6 +15,7 @@ export class AppComponent {
   imageUrl2: string = "https://www.metizsoft.com/wp-content/uploads/2024/06/Angular-18.webp";
   isDisabled: boolean = false;
   isActive: boolean = true;
+  username = 'John';
 
   fruitName = 'Apple';
 
@@ -34,5 +35,10 @@ export class AppComponent {
 
   keyupEnterHandlerByTag(user: HTMLInputElement) {
     console.log("Press Enter key", user.value);
+  }
+
+  keyupChangeHandler(userDetails: HTMLInputElement) {
+    console.log("Press Enter key", userDetails.value);
+    this.username = userDetails.value;
   }
 }

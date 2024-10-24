@@ -1,31 +1,70 @@
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
 <app-navbar></app-navbar>
 <app-header></app-header>
-<img src="{{imageUrl}}" alt="" />
+<img src="{{ imageUrl }}" alt="" />
 <img [src]="imageUrl2" alt="" />
 
-<button disabled="{{ isDisabled }}">Disabled by string interpolation</button> <!-- string interpolation always convert value in to string, so isDisabled=false boolean representation is true-->
+<button disabled="{{ isDisabled }}">Disabled by string interpolation</button>
+<!-- string interpolation always convert value in to string, so isDisabled=false boolean representation is true-->
 <button [disabled]="isDisabled">Disabled by property binding</button>
 <!-- for the property data binding we don't use string interpolation -->
+<div class="input-container">
+    <div>
+        <!-- class binding -->
+        <span>class binding</span>
+        <button [class.active]="isActive" [class.no-active]="!isActive">
+          Click Me
+        </button>
 
-<!-- class binding -->
-<button [class.active]="isActive" [class.no-active]="!isActive">Click Me</button>
+    </div>
 
-<!-- string condition check -->
-<button [class.apple]="fruitName == 'Apple'">Apple Button</button>
+    <div>
+        <!-- string condition check -->
+        <span>string condition check</span>
+        <button [class.apple]="fruitName == 'Apple'">Apple Button</button>
 
-<!-- style binding -->
-<button [style.background]="isActive ?'red' : 'yellow'">Style Button</button>
+    </div>
 
-<!-- click Event binding -->
-<button (click)="buttonClick()">Click Button</button>
+    <div>
+        <!-- style binding -->
+        <span>style binding</span>
+        <button [style.background]="isActive ? 'red' : 'yellow'">Style Button</button>
 
-<!-- keyup event input -->
-<input type="text" (keyup)="keyupHandler($event)" />
+    </div>
 
-<!-- keyup event binding by angular way -->
-<!-- if you want catch latter `a` press, just replace the (keyup.a)=`keyupHandler()` -->
-<input type="text" (keyup.enter)="keyupEnterHandler($event)" />
+    <div>
+        <!-- click Event binding -->
+        <span>click Event binding</span>
+        <button (click)="buttonClick()">Click Button</button>
+    </div>
 
-<!-- html template variable -->
-<input type="text" (keyup.enter)="keyupEnterHandlerByTag(user)" #user />
+    <div>
+        <!-- keyup event input -->
+        <span>keyup event input</span>
+        <input type="text" (keyup)="keyupHandler($event)" />
+    </div>
+
+    <div>
+        <!-- keyup event binding by angular way -->
+        <!-- if you want catch latter `a` press, just replace the (keyup.a)=`keyupHandler()` -->
+        <span>keyup event binding by angular way</span>
+        <input type="text" (keyup.enter)="keyupEnterHandler($event)" />
+    </div>
+
+    <div>
+        <!-- html template variable -->
+        <span>html template variable</span>
+        <input type="text" (keyup.enter)="keyupEnterHandlerByTag(user)" #user />
+    </div>
+
+    <div>
+        <!-- Two way data binding -->
+        <span>Two way data binding</span>
+        <input
+          type="text"
+          [value]="username"
+          (keyup.enter)="keyupChangeHandler(userDetails)"
+          #userDetails
+        />
+    </div>
+</div>

@@ -15,3 +15,15 @@ img {
     background-color: powderblue;
     border: 2px solid aquamarine;
 }
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    
+    > div {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+}
