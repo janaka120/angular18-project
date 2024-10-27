@@ -99,4 +99,13 @@
         <ng-template #errorMessage>User not logged in by ng-template</ng-template>
     </div>
 
+    <div>
+        <!-- if directive with number values -->
+        <button (click)="loginButtonClick()" *ngIf="loginAttemptCount < 3">Login</button>
+        <span>{{loginAttemptCount}}</span>
+        @if (loginAttemptCount >= 3) {
+            <h3>User exceeded number of login attempt</h3>
+        }
+    </div>
+
 </div>

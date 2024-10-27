@@ -22,6 +22,7 @@ export class AppComponent {
   isLoggedIn = false;
 
   fruitName = 'Apple';
+  loginAttemptCount = 0;
 
   buttonClick () {
     console.log("Button Click..");
@@ -44,5 +45,9 @@ export class AppComponent {
   keyupChangeHandler(userDetails: HTMLInputElement) {
     console.log("Press Enter key", userDetails.value);
     this.username = userDetails.value;
+  }
+
+  loginButtonClick() {
+    this.loginAttemptCount += 1;
   }
 }
