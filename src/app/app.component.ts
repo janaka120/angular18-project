@@ -23,7 +23,9 @@ export class AppComponent {
 
   fruitName = 'Apple';
   loginAttemptCount = 0;
-  users = ['John', 'Jin', 'Mical'];
+  users = ['John', 'Jin', 'Michael'];
+
+  usersDetails: Array<{name: string, address: string}> = [{name: 'John', address: 'California, UAS'}, {name:'Jin', address: 'Amsterdam, Sweden'}, {name: 'Michael', address: 'Bay Area, Singapore'}];
 
   buttonClick () {
     console.log("Button Click..");
@@ -50,5 +52,15 @@ export class AppComponent {
 
   loginButtonClick() {
     this.loginAttemptCount += 1;
+  }
+
+  addUserHandler() {
+    this.usersDetails.push({name: 'Sam', address: 'Perth, Australia'});
+  }
+
+  userDeleteHandler(user: {name: string, address: string}) {
+    console.log(user);
+    const index = this.usersDetails.indexOf(user);
+    this.usersDetails.splice(index, 1);
   }
 }

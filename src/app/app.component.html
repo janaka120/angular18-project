@@ -146,10 +146,27 @@
     <div>
         <span>unordered list by using Syntax Block | new syntax</span>
         <ul>
+            <!-- in angular , only needs to put repeating items inside block -->
             @for (user of users; track $index) {
                 <li>{{user}}</li>
             }
         </ul>
+    </div>
+
+    <div>
+        <span>unordered list by using Syntax Block | new syntax</span>
+        <ul>
+            <!-- in angular , only needs to put repeating items inside block -->
+            @for (user of usersDetails; track $index) {
+                <li>
+                    <div>
+                        <span #userItem>Name: {{user.name}}</span>
+                        <button (click)="userDeleteHandler(user)">Delete</button>
+                    </div>
+                </li>
+            }
+        </ul>
+        <button (click)="addUserHandler()">Add New User</button>
     </div>
 
 </div>
