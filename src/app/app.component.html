@@ -107,5 +107,22 @@
             <h3>User exceeded number of login attempt</h3>
         }
     </div>
+    
+    <div>
+        <!-- ng-templateoutlet directive used for render reuseable component dynamically-->
+        <ng-template #joinNow>
+            <button>Join Now</button>
+        </ng-template>
+        <span>Ng Template</span>
+        <div [ngTemplateOutlet]="joinNow">
+            <h5>Sidebar</h5>
+        </div>
+        <div [ngTemplateOutlet]="joinNow">
+            <h5>Hero</h5>
+        </div>
+        <div [ngTemplateOutlet]="joinNow">
+            <h5>Footer</h5>
+        </div>
+    </div>
 
 </div>

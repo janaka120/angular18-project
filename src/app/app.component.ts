@@ -3,11 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgTemplateOutlet } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AppNavbar, HeaderComponent, FormsModule, CommonModule],
+  imports: [RouterOutlet, AppNavbar, HeaderComponent, FormsModule, CommonModule, NgTemplateOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
