@@ -136,4 +136,20 @@
         }
     </div>
 
+    <div>
+        <span>unordered list by using ngFor | old syntax</span>
+        <ul>
+            <!-- ngFor uses to repeat the element, we need to loop, that's why it is used in li tag-->
+            <li *ngFor="let user of users">{{user}}</li>
+        </ul>
+    </div>
+    <div>
+        <span>unordered list by using Syntax Block | new syntax</span>
+        <ul>
+            @for (user of users; track $index) {
+                <li>{{user}}</li>
+            }
+        </ul>
+    </div>
+
 </div>
