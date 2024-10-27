@@ -58,7 +58,7 @@
     </div>
 
     <div>
-        <!-- Two way data binding with template variable #userDetails-->
+        <!-- Two way data binding with template variable #userDetails & property binding -->
         <span>Two way data binding</span>
         <input
           type="text"
@@ -74,4 +74,21 @@
         <input [(ngModel)]="userName1" />
         {{userName1}}
     </div>
+
+    <div>
+        <span>Structural Directive | Old way | *ngIf</span>
+        <h3 *ngIf="isLoggedIn">{{username}}</h3>
+        <span>Structural Directive | Old way | else | `!isLoggedIn` </span>
+        <h3 *ngIf="!isLoggedIn">User is not logged in</h3>
+    </div>
+
+    <div>
+        <span>Structural Directive | New way | using with if else syntax block</span>
+        @if (isLoggedIn) {
+            <h3>{{username}}</h3>
+        }@else {
+            <h3>User is not logged in</h3>
+        }
+    </div>
+
 </div>
