@@ -165,6 +165,9 @@
                     </div>
                 </li>
             }
+            @empty {
+                <span>No user details to display, pls add new user</span>
+            }
         </ul>
         <button (click)="addUserHandler()">Add New User</button>
     </div>
