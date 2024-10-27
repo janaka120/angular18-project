@@ -3,11 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
-import { CommonModule, NgTemplateOutlet } from '@angular/common';
+import { CommonModule, NgFor, NgTemplateOutlet } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AppNavbar, HeaderComponent, FormsModule, CommonModule, NgTemplateOutlet],
+  imports: [RouterOutlet, AppNavbar, HeaderComponent, FormsModule, CommonModule, NgTemplateOutlet, NgFor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -23,6 +23,7 @@ export class AppComponent {
 
   fruitName = 'Apple';
   loginAttemptCount = 0;
+  users = ['John', 'Jin', 'Mical'];
 
   buttonClick () {
     console.log("Button Click..");

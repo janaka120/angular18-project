@@ -125,4 +125,15 @@
         </div>
     </div>
 
+    <div>
+        <span>Loop array by using ngFor | old syntax</span>
+        <div *ngFor="let user of users">{{user}}</div>
+    </div>
+    <div>
+        <span>Loop array by Syntax Block | new syntax</span>
+        @for (user of users; track $index) {
+            <div>{{user}}</div>
+        }
+    </div>
+
 </div>
