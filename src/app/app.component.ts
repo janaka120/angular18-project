@@ -19,7 +19,7 @@ export class AppComponent {
   isActive: boolean = true;
   username = 'John';
   userName1 = 'Smith';
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   fruitName = 'Apple';
 

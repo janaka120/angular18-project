@@ -91,4 +91,12 @@
         }
     </div>
 
+    <div>
+        <span>ng-template Directive | Old way | if else handle</span>
+        <h3 *ngIf="isLoggedIn; else errorMessage">{{username}}</h3>
+       
+        <!-- #template-variable -->
+        <ng-template #errorMessage>User not logged in by ng-template</ng-template>
+    </div>
+
 </div>
